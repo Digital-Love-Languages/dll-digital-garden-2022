@@ -1,0 +1,90 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/*
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: black;
+  --color-text-main: white;
+  --color-primary: lightgrey;
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+
+@font-face {
+    font-family: cirrus;
+    src: url("assets/CirrusCumulus.otf") format("opentype");
+}
+
+body {
+  font-family: cirrus;
+  background-color: var(--color-bg);
+}
+
+/* Page structure */
+.wrapper {
+  margin: 0 1rem;
+  /* border: 2px dotted blue; */
+  display: grid;
+ place-items: center;
+ height: 100vh;
+}
+.content {
+  /* border: 2px dotted white; */
+  display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+img{
+
+opacity: .5;
+
+}
+
+
+img:hover{
+
+opacity: 1;
+
+}
+
+a, a:visited {
+  color: white;
+  font-size: 1.5em
+}
+
+
+.footer {
+
+  color: var(--color-primary);
+  font-family: cirrus;
+  font-size: 15px;
+  margin: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
