@@ -45,36 +45,81 @@ body {
 .wrapper {
   margin: 0 1rem;
   /* border: 2px dotted blue; */
-  display: grid;
- place-items: center;
+  /* display: grid;
+ place-items: center; */
  height: 100vh;
 }
 .content {
   /* border: 2px dotted white; */
-  display: flex;
+  /* display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
+justify-content: center; */
 }
 
-img{
-
-opacity: .5;
-
+.wrapper img {
+  opacity: .1;
 }
 
 
-img:hover{
-
-opacity: 1;
-
+label {
+  font-family: 'Times New Roman', serif;
+  color: white;
 }
+
 
 a, a:visited {
   color: white;
   font-size: 1.5em
 }
 
+/* 
+input[type="checkbox"] {
+  display: none;
+}
+label {
+  cursor: pointer;
+}
+input[type="checkbox"] + label:before {
+  border: 1px solid wheat;
+  content: "\00a0";
+  display: inline-block;
+  font: 16px/1em;
+  height: 16px;
+  margin: 0 .25em 0 0;
+  padding: 0;
+  padding-bottom: 2;
+  vertical-align: top;
+  width: 16px;
+}
+input[type="checkbox"]:checked + label:before {
+  background: black;
+  color: white;
+  content: "\273A";
+  text-align: center;
+      line-height: 1;
+}
+input[type="checkbox"]:checked + label:after {
+  font-weight: bold;
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 10px;
+  width: 965px;
+}
+.grid-item {
+  padding: 20px;
+}
+
+
+ul.myList {
+  display: inline;
+  margin: 0;
+padding: 0px 0px 0px 0px !important;
+    padding-inline-start: 0px !important;
+}
 
 .footer {
 
