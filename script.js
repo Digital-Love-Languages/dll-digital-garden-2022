@@ -4,7 +4,6 @@ console.log( "ready!" );
 
 console.log("I'm here, I'm here!⚘!");
 
-//<input type="checkbox" name="favorite_pet" value="Cats" onclick="return ValidatePetSelection();">Cats<br>
 
 var words = ['Communion', 'Consent', 'Refusal', 'Renewal'];
 

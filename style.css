@@ -1,79 +1,31 @@
-/******************************************************************************
-START Glitch hello-app default styles
-
-The styles in this section do some minimal CSS resets, set default fonts and
-colors, and handle the layout for our footer and "Remix on Glitch" button. If
-you're new to CSS they may seem a little complicated, but you can scroll down
-to this section's matching END comment to see page-specific styles.
-******************************************************************************/
-
-
-/*
-  The style rules specify elements by type and by attributes such as class and ID
-  Each section indicates an element or elements, then lists the style properties to apply
-  See if you can cross-reference the rules in this file with the elements in index.html
-*/
-
-/* Our default values set as CSS variables */
-:root {
-  --color-bg: black;
-  --color-text-main: white;
-  --color-primary: lightgrey;
-}
 
 /* Basic page style resets */
 * {
   box-sizing: border-box;
-}
-[hidden] {
-  display: none !important;
-}
-
-/* Import fonts */
-
-@font-face {
-    font-family: cirrus;
-    src: url("assets/CirrusCumulus.otf") format("opentype");
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: cirrus;
-  background-color: var(--color-bg);
 }
 
-/* Page structure */
-.wrapper {
-  margin: 0 1rem;
-  /* border: 2px dotted blue; */
-  /* display: grid;
- place-items: center; */
- height: 100vh;
-}
 .content {
-  /* border: 2px dotted white; */
-  /* display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center; */
+  padding: 15px;
 }
 
-.wrapper img {
-  opacity: .1;
+.filter-category {
+  margin-bottom: 20px;
 }
-
 
 label {
-  font-family: 'Times New Roman', serif;
-  color: white;
+  /* color: white; */
+  padding-left: 5px;
 }
 
 
-a, a:visited {
-  color: white;
-  font-size: 1.5em
-}
 
-/* 
+/* CUSTOM CHECKBOX  */
+/*
 input[type="checkbox"] {
   display: none;
 }
@@ -103,7 +55,7 @@ input[type="checkbox"]:checked + label:after {
   font-weight: bold;
 } */
 
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
   padding: 10px;
@@ -111,22 +63,14 @@ input[type="checkbox"]:checked + label:after {
 }
 .grid-item {
   padding: 20px;
-}
+} */
 
 
-ul.myList {
-  display: inline;
-  margin: 0;
-padding: 0px 0px 0px 0px !important;
-    padding-inline-start: 0px !important;
-}
 
 .footer {
-
-  color: var(--color-primary);
+  padding-bottom: 5px;
   font-family: cirrus;
   font-size: 15px;
-  margin: 0;
   position: fixed;
   left: 0;
   bottom: 0;
