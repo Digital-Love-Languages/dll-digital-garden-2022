@@ -8,8 +8,7 @@
 
 /* Custom style */
 body {
-  /* background-color: black;
-  color: white; */
+
 }
 
 .content {
@@ -23,6 +22,8 @@ body {
 label {
   padding-left: 5px;
 }
+
+
 
 .footer {
   padding-bottom: 5px;
