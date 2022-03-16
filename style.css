@@ -6,7 +6,10 @@
   padding: 0;
 }
 
+/* Custom style */
 body {
+  /* background-color: black;
+  color: white; */
 }
 
 .content {
@@ -18,54 +21,8 @@ body {
 }
 
 label {
-  /* color: white; */
   padding-left: 5px;
 }
-
-
-
-/* CUSTOM CHECKBOX  */
-/*
-input[type="checkbox"] {
-  display: none;
-}
-label {
-  cursor: pointer;
-}
-input[type="checkbox"] + label:before {
-  border: 1px solid wheat;
-  content: "\00a0";
-  display: inline-block;
-  font: 16px/1em;
-  height: 16px;
-  margin: 0 .25em 0 0;
-  padding: 0;
-  padding-bottom: 2;
-  vertical-align: top;
-  width: 16px;
-}
-input[type="checkbox"]:checked + label:before {
-  background: black;
-  color: white;
-  content: "\273A";
-  text-align: center;
-      line-height: 1;
-}
-input[type="checkbox"]:checked + label:after {
-  font-weight: bold;
-} */
-
-/* .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  padding: 10px;
-  width: 965px;
-}
-.grid-item {
-  padding: 20px;
-} */
-
-
 
 .footer {
   padding-bottom: 5px;
