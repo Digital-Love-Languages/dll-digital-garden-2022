@@ -12,7 +12,7 @@ var words = ['Communion', 'Consent', 'Refusal', 'Renewal'];
         .append(`<br>`);
     }
 
-var names = ['Andre Medina' , 'carolina treviño' , 'Charis Poon' , 'Chirag Davé' , 'Erica Goodwin' , 'Evangeline Brooks' , 'Francesca Cantor' , 'Garrett Blaize' , 'Gwendolyn Wallace' , 'Jianfei Lyu' , 'Ladan Bahmani' , 'LaRisa Anderson' , 'Miaoye Que' , 'Nate Mooney' , 'Patricia Wood' , 'Rudy Natanzon' , 'Simone Robert' , 'Thomas Knoepffler' , 'Tuan Huang', 'Ahreum Lee' , 'Alexa Ann Bonomo' , 'Caiu' , 'Carolyn Li-Madeo' , 'Elisabeth Schifrin' , 'Elvia Vasconcelos' , 'Fernanda González' , 'Fikir Derese' , 'Henry Holtgeerts' , 'Jacob Sheffet' , 'Jake Levin' , 'Lewis Chesebrough' , 'Lia Coleman' , 'lillyanne pham' , 'Mark Hernandez Motaghy' , 'Michelle Santiago Cortés' , 'Rebecca Nea Alemee Meyer' , 'SHALIN SHAH' , 'Yalda Bidshahri'];
+var names = ['Andre Medina' , 'carolina treviño' , 'Charis Poon' , 'Chirag Davé' , 'Erica Goodwin' , 'Evangeline Brooks' , 'Francesca Cantor' , 'Garrett Blaize' , 'Gwendolyn Wallace' , 'Jianfei Lyu' , 'Ladan Bahmani' , 'LaRisa Anderson' , 'Miaoye Que' , 'Nate Mooney' , 'Patricia Wood' , 'Rudy Natanzon' , 'Simone Robert' , 'Thomas Knoepffler' , 'Tuan Huang', 'Ahreum Lee' , 'Alexa Ann Bonomo' , 'Caiu' , 'Carolyn Li-Madeo' , 'Elisabeth Schifrin' , 'Elvia Vasconcelos' , 'Fernanda González' , 'Fikir Derese' , 'Galen Macdonald' ,'Henry Holtgeerts' , 'Jacob Sheffet' , 'Jake Levin' , 'Lewis Chesebrough' , 'Lia Coleman' , 'lillyanne pham' , 'Mark Hernandez Motaghy' , 'Michelle Santiago Cortés' , 'Rebecca Nea Alemee Meyer' , 'SHALIN SHAH' , 'Yalda Bidshahri'];
 
     for (var value of names) {
       $('.names')
