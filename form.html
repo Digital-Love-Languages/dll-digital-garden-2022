@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="assets/favicon.ico" />
+  <script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+  <!--
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+  <title>Digital Garden</title>
+
+  <!-- Import the webpage's stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Import the webpage's javascript file -->
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <div class="content">
+
+    <form action="/form_post" method="post">
+
+    <div>
+    <label for="names-dropdown">Student</label>
+    <select id="names-dropdown" name="name">
+    </select>
+      </div>
+
+    <br/>
+
+    <div>
+    <label for="projects-dropdown">Project</label>
+    <select id="projects-dropdown" name="project">
+    </select>
+    </div>
+
+    <br/>
+
+    <div>
+      <label> Topic </label>
+    </div>
+    <br/>
+    <div id="topics-radio">
+    </div>
+
+     <br/>
+
+      <div>
+        <label for="link-input"> Link </label>
+      </div>
+      <input type="text" id="link-input" name="link-input" value=""/>
+
+<br/><br/><br/>
+
+
+      <input id="submit-button" type="submit" value="Submit">
+
+    </form>
+
+  </div>
+
+
+  <div class="footer">
+    <h1 class="title">Digital Love Languages ⚘ Homework Form</h1>
+  </div>
+
+</body>
+
+</html>

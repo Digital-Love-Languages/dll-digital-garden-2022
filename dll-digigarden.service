@@ -1,0 +1,13 @@
+[Unit]
+Description=A python web form for dll-digigarden
+
+[Service]
+Type=simple
+User=dll-digigarden
+Group=bind
+WorkingDirectory=/srv/dll-digigarden-form
+ExecStart=/srv/dll-digigarden-form/dll-digigarden/bin/python /srv/dll-digigarden-form/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

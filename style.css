@@ -35,3 +35,16 @@ label {
   width: 100%;
   text-align: center;
 }
+
+#topics-radio {
+  padding-left: 20px;
+}
+
+#submit-button {
+  padding: 20px;
+}
+
+#link-input {
+  width: 500px;
+  padding: 5px;
+}
