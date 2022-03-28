@@ -20,11 +20,15 @@ def index():
 def hello():
     return "Hello World!"
 
-
 @app.route("/")
-def form():
-    return render_template(
-        'form.html',**locals())
+def main_page():
+    return "you might be looking for this page, http://digitallovelanguages.com/form"
+
+#
+# @app.route("/form")
+# def form():
+#     return render_template(
+#         'form.html',**locals())
 
 
 @app.route('/form_post', methods = ['POST'])
@@ -32,7 +36,7 @@ def form_post():
     if request.method == 'POST':
         data = request.form
         print("data: {}".format(data))
-        filename = data['fname'] + "-" + data['lname']
+        filename = data['name'] + "-" + data['project']
         file_path = os.path.join(DATA_DIR, filename)
         with open(file_path, 'w') as f:
             f.write(json.dumps(data))
