@@ -157,7 +157,7 @@ $( document ).ready(function() {
       }
 
 
-      var days = CONFIG["DAYS"].keys();
+      var days = CONFIG["DAYS"].values();
       for (var value of days) {
         $('.days')
           .append(`<input class="day-checkbox" type="checkbox" id="${value}" name="interest" value="${value}">`)
@@ -171,9 +171,11 @@ $( document ).ready(function() {
         console.log("data successfully loaded for /");
         console.log(data);
         // set the day of the student, based on their name
+        var days = CONFIG["DAYS"].values();
         for (var value in data) {
             for (var day in days) {
-              if (CONFIG["DAYS"][day].includes(value.name)) {
+              let students_in_day = CONFIG["DAYS"][day];
+              if (students_in_day.includes(value.name)) {
                 value.day = day;
               }
             }
