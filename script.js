@@ -8,7 +8,7 @@ $( document ).ready(function() {
   console.log("I'm here, I'm here!⚘!");
   var pathname = window.location.pathname;
 
-  if (pathname === "/form.html") {
+  if (pathname === "/form.html" || pathname === '/form') {
     $.getJSON(CONFIG_FILE_URL, function (config) {
       CONFIG = config;
       console.log("config successfully loaded for /form");
