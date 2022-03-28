@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 PROJECT_PATH = os.path.dirname(__file__)
 DATA_DIR = os.path.join(PROJECT_PATH, "dll_data")
-DATA_FILE = os.path.join(PROJECT_PATH, "data.json")
+DATA_FILE = os.path.join(PROJECT_PATH, "static/data.json")
 
 if not os.path.exists(DATA_DIR):
     os.mkdir(DATA_DIR)
