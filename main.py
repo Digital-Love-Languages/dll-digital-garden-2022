@@ -26,7 +26,7 @@ def hello():
 
 @app.route("/")
 def main_page():
-    return "you might be looking for this page, http://digitallovelanguages.com/form"
+    return 'you might be looking for this page, <a href=http://digitallovelanguages.com/form>http://digitallovelanguages.com/form</a>'
 
 #
 # @app.route("/form")
