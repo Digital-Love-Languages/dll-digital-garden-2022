@@ -6,13 +6,40 @@ var CONFIG_FILE_URL = "http://digitallovelanguages.com/assets/config.json"
 $( document ).ready(function() {
 
   console.log("I'm here, I'm here!⚘!");
+  var pathname = window.location.pathname;
 
-  $.getJSON(CONFIG_FILE_URL, function(config) {
-    CONFIG = config;
-    console.log("config successfully loaded");
+  if (pathname === "/form.html") {
+    $.getJSON("assets/config.json", function (config) {
+      CONFIG = config;
+      console.log("config successfully loaded for /form");
 
-    $.getJSON( DATA_FILE_URL, function( data ) {
+      // values for form
+      for (var value of CONFIG['NAMES']) {
+        $('#names-dropdown')
+          .append(`<option value="${value}">${value}</option>`)
+          .append(`<br>`);
+      }
+
+      for (var value of CONFIG['PROJECTS']) {
+        $('#projects-dropdown')
+          .append(`<option value="${value}">${value}</option>`)
+          .append(`<br>`);
+      }
+
+      for (var value of CONFIG['WORDS']) {
+        $('#topics-radio')
+          .append(`<div>
+      <input type="radio" id="${value}" name="topic" value="${value}">
+        <label for="communion">${value}</label>
+    </div>`);
+      }
+    });
+  }
+  // if pathname == "/"
+  else {
+    $.getJSON(DATA_FILE_URL, function (data) {
       DATA = data;
+      console.log("data successfully loaded for /");
       console.log(data);
 
       for (var value of data) {
@@ -21,6 +48,10 @@ $( document ).ready(function() {
           .append(`<a class="data-link" href="${value["link-input"]}">${value.name}-${value.project}</a>`)
           .append(`<br>`);
       }
+    });
+    $.getJSON("assets/config.json", function (config) {
+      CONFIG = config;
+      console.log("config successfully loaded for /");
 
       var words = CONFIG["WORDS"];
 
@@ -59,34 +90,9 @@ $( document ).ready(function() {
           .append(`<br>`);
       }
 
-      // values for form
-      for (var value of names) {
-        $('#names-dropdown')
-          .append(`<option value="${value}">${value}</option>`)
-          .append(`<br>`);
-      }
 
-      for (var value of projects) {
-        $('#projects-dropdown')
-          .append(`<option value="${value}">${value}</option>`)
-          .append(`<br>`);
-      }
-
-      for (var value of words) {
-        $('#topics-radio')
-          .append(`<div>
-      <input type="radio" id="${value}" name="topic" value="${value}">
-        <label for="communion">${value}</label>
-    </div>`);
-      }
+    }).fail(function () {
+      console.log("fetching json failed");
     });
-  }).fail(function() {
-    console.log("fetching json failed");
-  });
-
-
-
-
-
-
+  }
 });
