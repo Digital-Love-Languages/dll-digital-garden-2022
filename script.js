@@ -1,12 +1,13 @@
 var CONFIG;
 var DATA;
 var DATA_FILE_URL = "http://form.digitallovelanguages.com/static/data.json";
+var CONFIG_FILE_URL = "http://digitallovelanguages.com/assets/config.json"
 
 $( document ).ready(function() {
 
   console.log("I'm here, I'm here!⚘!");
 
-  $.getJSON("assets/config.json", function(config) {
+  $.getJSON(CONFIG_FILE_URL, function(config) {
     CONFIG = config;
     console.log("config successfully loaded");
 
