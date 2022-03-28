@@ -13,6 +13,13 @@ body {
 
 .content {
   padding: 15px;
+  float: left;
+}
+
+.garden {
+  float: left;
+  padding-left: 70px;
+  padding-top: 15px;
 }
 
 .filter-category {
