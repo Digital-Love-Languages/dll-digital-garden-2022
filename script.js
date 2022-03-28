@@ -172,7 +172,7 @@ $( document ).ready(function() {
         console.log(data);
         // set the day of the student, based on their name
         var days = Object.keys(CONFIG["DAYS"]);
-        for (var value in data) {
+        for (var value of data) {
             for (var day of days) {
               var students_in_day = CONFIG["DAYS"][day];
               if (students_in_day.includes(value.name)) {
