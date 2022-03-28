@@ -1,8 +1,11 @@
 import os, json
 
 from flask import Flask, flash, redirect, render_template, request, session, abort
+from flask_cors import CORS
 
+# Initialize
 app = Flask(__name__)
+cors = CORS(app, resources={r"/static/*": {"origins": "*"}})
 
 PROJECT_PATH = os.path.dirname(__file__)
 DATA_DIR = os.path.join(PROJECT_PATH, "dll_data")
