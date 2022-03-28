@@ -3,7 +3,43 @@
   "NAMES": ["Andre Medina" , "carolina treviño" , "Charis Poon" , "Chirag Davé" , "Erica Goodwin" , "Evangeline Brooks" , "Francesca Cantor" , "Garrett Blaize" , "Gwendolyn Wallace" , "Jianfei Lyu" , "Ladan Bahmani" , "LaRisa Anderson" , "Miaoye Que" , "Nate Mooney" , "Patricia Wood" , "Rudy Natanzon" , "Simone Robert" , "Thomas Knoepffler" , "Tuan Huang", "Ahreum Lee" , "Alexa Ann Bonomo" , "Caiu" , "Carolyn Li-Madeo" , "Elisabeth Schifrin" , "Elvia Vasconcelos" , "Fernanda González" , "Fikir Derese" , "Galen Macdonald" ,"Henry Holtgeerts" , "Jacob Sheffet" , "Jake Levin" , "Lewis Chesebrough" , "Lia Coleman" , "lillyanne pham" , "Mark Hernandez Motaghy" , "Michelle Santiago Cortés" , "Rebecca Nea Alemee Meyer" , "SHALIN SHAH" , "Yalda Bidshahri"],
   "PROJECTS": ["Speculative Liberatory Learning Environment", "Folder Poetry", "Passing Notes", "Consensual Hacking", "Other"],
   "DAYS": {
-    "Thursday": ["Andre Medina", "carolina treviño", "Charis Poon"],
-    "Friday": ["Charis Poon", "Chirag Davé", "Garrett Blaize"]
+    "Thursday": [
+      "gwendolyn wallace",
+      "Simone Robert",
+      "miaoye que",
+      "Thomas Knoepffler",
+      "Evangeline Brooks",
+      "LaRisa Anderson",
+      "Francesca Cantor",
+      "Rudy Natanzon",
+      "Charis Poon",
+      "Nate Mooney",
+      "Erica Goodwin",
+      "Ladan Bahmani",
+      "Patricia Wood",
+      "Tuan Huang",
+      "Andre Medina",
+      "Carolina Treviño",
+      "Jianfei (Rita) Lyu",
+      "Lewis Chesebrough",
+      "Garrett Blaize"
+    ],
+    "Friday": [
+      "Lia Coleman",
+      "Rebecca Meyer",
+      "Henry Holtgeerts",
+      "Carolyn Li-Madeo",
+      "Jake Sheffet",
+      "Candelaria Nachon (I go by Caiu)",
+      "Yalda Bidshahri",
+      "Chirag Davé",
+      "Michelle Santiago Cortés",
+      "Ahreum Lee",
+      "lillyanne pham",
+      "Elvia Vasconcelos",
+      "Mark Hernandez Motaghy",
+      "Jake Levin",
+      "Galen Macdonald"
+    ]
   }
 }
