@@ -125,29 +125,12 @@ $( document ).ready(function() {
           .append(`<br>`);
       }
     }
-
-    // load all the assignments and then do an initial rendering
-    $.getJSON(DATA_FILE_URL, function (data) {
-      DATA = data;
-      console.log("data successfully loaded for /");
-      console.log(data);
-      renderFilters(data);
-
-      // and add a click handler, to re-filter, whenever a checkbox
-      // is clicked
-      $("input[type=checkbox]").click(function(e) {
-          renderFilters(data);
-      });
-
-    });
-
     // build all the filters based on values in config
     $.getJSON(CONFIG_FILE_URL, function (config) {
       CONFIG = config;
       console.log("config successfully loaded for /");
 
       var words = CONFIG["WORDS"];
-
       for (var value of words) {
         $('.words')
           .append(`<input class="topic-checkbox" type="checkbox" id="${value}" name="interest" value="${value}">`)
@@ -174,14 +157,37 @@ $( document ).ready(function() {
       }
 
 
-      var days = CONFIG["DAYS"];
-
+      var days = CONFIG["DAYS"].keys();
       for (var value of days) {
         $('.days')
           .append(`<input class="day-checkbox" type="checkbox" id="${value}" name="interest" value="${value}">`)
           .append(`<label for="${value}">${value}</label></div>`)
           .append(`<br>`);
       }
+
+      // load all the assignments and then do an initial rendering
+      $.getJSON(DATA_FILE_URL, function (data) {
+        DATA = data;
+        console.log("data successfully loaded for /");
+        console.log(data);
+        // set the day of the student, based on their name
+        for (var value in data) {
+            for (var day in days) {
+              if (CONFIG["DAYS"][day].includes(value.name)) {
+                value.day = day;
+              }
+            }
+        }
+
+        renderFilters(data);
+
+        // and add a click handler, to re-filter, whenever a checkbox
+        // is clicked
+        $("input[type=checkbox]").click(function(e) {
+          renderFilters(data);
+        });
+
+      });
 
     // if loading the data failed
     }).fail(function () {
