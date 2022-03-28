@@ -67,8 +67,6 @@ $( document ).ready(function() {
         <label for="communion">${value}</label>
     </div>`);
     }
-
-
   }).fail(function() {
       console.log("fetching json failed");
   });
