@@ -49,7 +49,7 @@ $( document ).ready(function() {
           .append(`<br>`);
       }
     });
-    $.getJSON("assets/config.json", function (config) {
+    $.getJSON(CONFIG_FILE_URL, function (config) {
       CONFIG = config;
       console.log("config successfully loaded for /");
 
