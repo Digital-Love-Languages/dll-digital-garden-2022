@@ -1,14 +1,37 @@
+/// hi, welcome to script.js,
+/// this file helps display the web pages for digitallovelanguages.com
+/// using jquery
+///
+/// the assignments and names of students are loaded by script.js,
+/// and then used to populate the pages
+/// the two pages are
+/// /form (where assignments are submitted)
+/// / (where assignments are filtered and viewed)
+///
+/// both pages use this script.js file, but you can see down below
+/// that we use window.location.pathname so that
+/// only some functions are run for each page
+/// e.g. the function to populate the dropdowns only runs on /form
+/// and the function to populate the filters only runs on /
+
+/// the url that the data (submitted assignments) is loaded from
+var DATA_FILE_URL = "http://form.digitallovelanguages.com/static/data.json";
+/// the url that the config (words, projects, names), is loaded from
+var CONFIG_FILE_URL = "http://digitallovelanguages.com/assets/config.json"
+/// global variables where the config and data are stored
 var CONFIG;
 var DATA;
-var DATA_FILE_URL = "http://form.digitallovelanguages.com/static/data.json";
-var CONFIG_FILE_URL = "http://digitallovelanguages.com/assets/config.json"
 
+/// wait until the page is loaded before initializing anything
 $( document ).ready(function() {
 
   console.log("I'm here, I'm here!⚘!");
   var pathname = window.location.pathname;
 
+  // initialize everything for the /form page
   if (pathname === "/form.html" || pathname === '/form') {
+
+    // initialize the dropdowns on
     $.getJSON(CONFIG_FILE_URL, function (config) {
       CONFIG = config;
       console.log("config successfully loaded for /form");
@@ -35,20 +58,90 @@ $( document ).ready(function() {
       }
     });
   }
-  // if pathname == "/"
+
+  // initialize everything for "/"
   else {
+
+    // a function which takes in the loaded data,
+    // and then based on which filters are selected,
+    // renders the correct data appropriately
+    function renderFilters(data) {
+
+      var selectedDays = $('.day-checkbox:checkbox:checked').map(function() {
+        return $(this).val();
+      }).get();
+      var selectedNames = $('.name-checkbox:checkbox:checked').map(function() {
+        return $(this).val();
+      }).get();
+      var selectedProjects = $('.project-checkbox:checkbox:checked').map(function() {
+        return $(this).val();
+      }).get();
+      var selectedTopics = $('.topic-checkbox:checkbox:checked').map(function() {
+        return $(this).val();
+      }).get();
+
+      // store all results which we will keep in here
+      filteredData = data;
+
+      // filter by days
+      if (selectedDays.length > 0) {
+        filteredData =  filteredData.filter(function(value) {
+          return selectedDays.includes(value.day)
+        });
+      }
+      // filter by names
+      if (selectedNames.length > 0) {
+        filteredData =  filteredData.filter(function(value) {
+          return selectedNames.includes(value.name)
+        });
+      }
+      // filter by project
+      if (selectedProjects.length > 0) {
+        filteredData =  filteredData.filter(function(value) {
+          return selectedProjects.includes(value.project)
+        });
+      }
+      // filter by topic
+      if (selectedTopics.length > 0) {
+        filteredData =  filteredData.filter(function(value) {
+          return selectedTopics.includes(value.topic)
+        });
+      }
+
+      // first clear out the garden
+      $('.garden').empty();
+      // then re-render all the visible items in it
+      for (var value of filteredData) {
+        console.log(value);
+        let title;
+        if ('title' in value && value.title !== '' ) {
+          title = value.title;
+        }
+        else {
+          title = "Untitled"
+        }
+        $('.garden')
+          .append(`<a class="data-link" href="${value["link-input"]}">${value.name} - ${title}</a>`)
+          .append(`<br>`);
+      }
+    }
+
+    // load all the assignments and then do an initial rendering
     $.getJSON(DATA_FILE_URL, function (data) {
       DATA = data;
       console.log("data successfully loaded for /");
       console.log(data);
+      renderFilters(data);
 
-      for (var value of data) {
-        console.log(value);
-        $('.garden')
-          .append(`<a class="data-link" href="${value["link-input"]}">${value.name}-${value.project}</a>`)
-          .append(`<br>`);
-      }
+      // and add a click handler, to re-filter, whenever a checkbox
+      // is clicked
+      $("input[type=checkbox]").click(function(e) {
+          renderFilters(data);
+      });
+
     });
+
+    // build all the filters based on values in config
     $.getJSON(CONFIG_FILE_URL, function (config) {
       CONFIG = config;
       console.log("config successfully loaded for /");
@@ -57,7 +150,7 @@ $( document ).ready(function() {
 
       for (var value of words) {
         $('.words')
-          .append(`<input type="checkbox" id="${value}" name="interest" value="${value}">`)
+          .append(`<input class="topic-checkbox" type="checkbox" id="${value}" name="interest" value="${value}">`)
           .append(`<label for="${value}">${value}</label></div>`)
           .append(`<br>`);
       }
@@ -66,7 +159,7 @@ $( document ).ready(function() {
 
       for (var value of names) {
         $('.names')
-          .append(`<input type="checkbox" id="${value}" name="interest" value="${value}">`)
+          .append(`<input class="name-checkbox" type="checkbox" id="${value}" name="interest" value="${value}">`)
           .append(`<label for="${value}">${value}</label></div>`)
           .append(`<br>`);
       }
@@ -75,7 +168,7 @@ $( document ).ready(function() {
 
       for (var value of projects) {
         $('.projects')
-          .append(`<input type="checkbox" id="${value}" name="interest" value="${value}">`)
+          .append(`<input class="project-checkbox" type="checkbox" id="${value}" name="interest" value="${value}">`)
           .append(`<label for="${value}">${value}</label></div>`)
           .append(`<br>`);
       }
@@ -85,12 +178,12 @@ $( document ).ready(function() {
 
       for (var value of days) {
         $('.days')
-          .append(`<input type="checkbox" id="${value}" name="interest" value="${value}">`)
+          .append(`<input class="day-checkbox" type="checkbox" id="${value}" name="interest" value="${value}">`)
           .append(`<label for="${value}">${value}</label></div>`)
           .append(`<br>`);
       }
 
-
+    // if loading the data failed
     }).fail(function () {
       console.log("fetching json failed");
     });
