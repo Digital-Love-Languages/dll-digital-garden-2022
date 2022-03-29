@@ -115,6 +115,15 @@ $( document ).ready(function() {
           return selectedTopics.includes(value.topic)
         });
       }
+      // if no checkboxes are selected then show nothing
+      if (
+        selectedDays.length === 0
+        && selectedNames.length === 0
+        && selectedTopics.length === 0
+        && selectedProjects.length === 0
+      ) {
+        filteredData = [];
+      }
 
       // first clear out the garden
       $('.garden').empty();
@@ -193,8 +202,6 @@ $( document ).ready(function() {
               }
             }
         }
-
-        renderFilters(data);
 
         // and add a click handler, to re-filter, whenever a checkbox
         // is clicked
