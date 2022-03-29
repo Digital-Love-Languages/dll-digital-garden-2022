@@ -36,8 +36,16 @@ $( document ).ready(function() {
       CONFIG = config;
       console.log("config successfully loaded for /form");
 
+      // concatenate all student names together from both classes
+      var names = [];
+      for (var day of Object.keys(CONFIG["DAYS"])) {
+        var students = CONFIG["DAYS"][day];
+        names = names.concat(students);
+      }
+      names = names.sort();
+
       // values for form
-      for (var value of CONFIG['NAMES']) {
+      for (var value of names) {
         $('#names-dropdown')
           .append(`<option value="${value}">${value}</option>`)
           .append(`<br>`);
@@ -138,8 +146,13 @@ $( document ).ready(function() {
           .append(`<br>`);
       }
 
-      var names = CONFIG["NAMES"];
-
+      // concatenate all student names together from both classes
+      var names = [];
+      for (var day of Object.keys(CONFIG["DAYS"])) {
+        var students = CONFIG["DAYS"][day];
+        names = names.concat(students);
+      }
+      names = names.sort();
       for (var value of names) {
         $('.names')
           .append(`<input class="name-checkbox" type="checkbox" id="${value}" name="interest" value="${value}">`)
