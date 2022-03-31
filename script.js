@@ -29,10 +29,10 @@ $( document ).ready(function() {
   var pathname = window.location.pathname;
 
   // redirect https to http
-  if (window.location.protocol === "https:") {
-    window.location.protocol = "http:";
-    window.location.reload();
+  if (location.protocol === 'https:') {
+    location.replace(`http:${location.href.substring(location.protocol.length)}`);
   }
+
 
   // initialize everything for the /form page
   if (pathname === "/form.html" || pathname === '/form') {
