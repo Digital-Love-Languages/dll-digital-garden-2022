@@ -28,6 +28,12 @@ $( document ).ready(function() {
   console.log("I'm here, I'm here!⚘!");
   var pathname = window.location.pathname;
 
+  // redirect https to http
+  if (window.location.protocol === "https:") {
+    window.location.protocol = "http:";
+    window.location.reload();
+  }
+
   // initialize everything for the /form page
   if (pathname === "/form.html" || pathname === '/form') {
 
