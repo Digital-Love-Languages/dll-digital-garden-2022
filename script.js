@@ -30,6 +30,7 @@ $( document ).ready(function() {
 
   // redirect https to http
   if (location.protocol === 'https:') {
+    console.log("...redirecting to http");
     location.replace(`http:${location.href.substring(location.protocol.length)}`);
   }
 
