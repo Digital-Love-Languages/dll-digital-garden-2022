@@ -49,6 +49,10 @@ $( document ).ready(function() {
         var students = CONFIG["DAYS"][day];
         names = names.concat(students);
       }
+      // add teachers to list of names
+      var teachers = CONFIG["TEACHERS"];
+      names = names.concat(teachers);
+      // sort names
       names = names.sort();
 
       // values for form
@@ -168,7 +172,13 @@ $( document ).ready(function() {
         var students = CONFIG["DAYS"][day];
         names = names.concat(students);
       }
+      // add teachers to list of names
+      var teachers = CONFIG["TEACHERS"];
+      names = names.concat(teachers);
+      // sort names
       names = names.sort();
+
+      // create checkboxes for each name
       for (var value of names) {
         $('.names')
           .append(`<input class="name-checkbox" type="checkbox" id="${value}" name="interest" value="${value}">`)
