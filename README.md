@@ -11,3 +11,17 @@ cd /srv/dll-digigarden-form
 git pull origin main
 systemctl restart dll-digigarden
 ```
+
+
+# local development 
+
+while developing locally, change this line in script.js,
+```
+var CONFIG_FILE_URL = "http://digitallovelanguages.com/assets/config.json"
+```
+to
+```
+var CONFIG_FILE_URL = "http://localhost:8000/assets/config.json"
+```
+... 
+or else it will be loading the config from the server, and can make for the classic "why are my changes not showing up" bug
