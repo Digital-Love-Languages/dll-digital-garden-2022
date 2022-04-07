@@ -60,8 +60,13 @@ def form_post():
         print("data: {}".format(data))
         filename = data['name'] + "-" + data['project']
         file_path = os.path.join(DATA_DIR, filename)
-        with open(file_path, 'w') as f:
-            f.write(json.dumps(data))
+        link = data['link-input']
+        if link:
+            with open(file_path, 'w') as f:
+                f.write(json.dumps(data))
+        # if link is empty, then delete this entry
+        else:
+            os.remove(file_path)
     # regenerate all data into one file
     regenerate_data_file()
     return "your form submission was saved, thank you"
