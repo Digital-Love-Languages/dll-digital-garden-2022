@@ -17,7 +17,8 @@
 /// the url that the data (submitted assignments) is loaded from
 var DATA_FILE_URL = "http://form.digitallovelanguages.com/static/data.json";
 /// the url that the config (words, projects, names), is loaded from
-var CONFIG_FILE_URL = "http://digitallovelanguages.com/assets/config.json"
+// var CONFIG_FILE_URL = "http://digitallovelanguages.com/assets/config.json"
+var CONFIG_FILE_URL = "http://localhost:8000/assets/config.json"
 /// global variables where the config and data are stored
 var CONFIG;
 var DATA;
@@ -149,7 +150,7 @@ $( document ).ready(function() {
           title = "Untitled"
         }
         $('.garden')
-          .append(`<a class="data-link" href="${value["link-input"]}">${value.name} - ${title}</a>`)
+          .append(`<a class="data-link" href="${value["link-input"]}" target="_blank" >${value.name} - ${title}</a>`)
           .append(`<br>`);
       }
     }
