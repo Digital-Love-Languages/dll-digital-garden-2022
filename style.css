@@ -57,6 +57,6 @@ label {
 }
 
 .data-link {
-  text-decoration: none;
-  color: lightblue;
+  color: blue;
+  text-decoration: underline;
 }

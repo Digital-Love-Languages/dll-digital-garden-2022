@@ -13,7 +13,12 @@ systemctl restart dll-digigarden
 ```
 
 
-# local development 
+# local development
+
+run:
+```
+python -m SimpleHTTPServer 8000
+```
 
 while developing locally, change this line in script.js,
 ```
@@ -23,5 +28,5 @@ to
 ```
 var CONFIG_FILE_URL = "http://localhost:8000/assets/config.json"
 ```
-... 
+...
 or else it will be loading the config from the server, and can make for the classic "why are my changes not showing up" bug
