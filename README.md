@@ -10,6 +10,11 @@ run:
 python -m SimpleHTTPServer 8000
 ```
 
+or if running python3:
+```
+python3 -m http.server 8000
+```
+
 then visit http://localhost:8000
 
 __________________
