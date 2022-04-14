@@ -33,7 +33,7 @@ or else it will be loading the config from the server, and can make for the clas
 
 
 # how to deploy to the public internet
-digitallovelanguages.com is published from gh-pages branch of https://github.com/mhfowler/dll-digital-garden-2022
+digitallovelanguages.com is published from the main branch of https://github.com/mhfowler/dll-digital-garden-2022
 
 form.digitallovelanguages.com is deployed as a flask app at 147.182.177.135:/srv/dll-digigarden-form
 ```
