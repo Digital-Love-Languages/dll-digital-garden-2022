@@ -10,11 +10,27 @@
 body {
     /* https://www.gradient-animator.com/ is fun */
     /* https://cssgradient.io -- has some colors to try */
-    background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
-    background-size: 400% 400%;
-    -webkit-animation: AnimationName 72s ease infinite;
+    /* background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%); */
+
+  background-image: url("https://cdn.glitch.global/435182a9-55ac-4fdb-b9f3-188c93838242/morgane-le-breton-rqIr5yFIaGc-unsplash.jpg?v=1649957153631");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: stretch;
+  padding: 32px;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  overflow-x: hidden;
+    /* -webkit-animation: AnimationName 72s ease infinite;
     -moz-animation: AnimationName 72s ease infinite;
-    animation: AnimationName 72s ease infinite;
+    animation: AnimationName 72s ease infinite; */
+
+}
+
+.background {
+
+
 }
 
 @-webkit-keyframes AnimationName {
