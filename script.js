@@ -229,6 +229,11 @@ $( document ).ready(function() {
           // also add classname to body based on input name
           let id = $(this).attr("id");
           let bodyClassName = id.replace(/\s+/g, '-').toLowerCase();
+
+          // for glitch not supporting unicode
+          bodyClassName = bodyClassName.replace('é', 'e');
+
+          // checked
           if ($(this).is(":checked")) {
               $("body").addClass(bodyClassName);
           }
