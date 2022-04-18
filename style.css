@@ -99,6 +99,11 @@ label {
   text-decoration: underline;
 }
 
+a {
+  border: 1px dashed yellow;
+  margin: 10px;
+}
+
 body.max-fowler {
     background-color: blue;
     background-image: none;
@@ -111,4 +116,9 @@ body.melanie-hoff {
 body.michelle-santiago-cortes {
     background-color: green;
     background-image: none;
+}
+
+body.melanie-hoff a{
+    font-size: 4em;
+    color: violet;
 }
