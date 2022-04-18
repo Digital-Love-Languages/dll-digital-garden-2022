@@ -98,3 +98,12 @@ label {
   color: blue;
   text-decoration: underline;
 }
+
+body.max-fowler {
+    background-color: blue;
+    background-image: none;
+}
+
+body.melanie-hoff {
+    transform: rotate(-30deg);
+}

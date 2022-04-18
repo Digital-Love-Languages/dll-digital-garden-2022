@@ -71,5 +71,6 @@ def form_post():
     regenerate_data_file()
     return "your form submission was saved, thank you"
 
+
 if __name__ == "__main__":
     app.run()
