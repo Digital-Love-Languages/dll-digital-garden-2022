@@ -122,3 +122,14 @@ body.melanie-hoff a{
     font-size: 4em;
     color: violet;
 }
+
+body.galen-macdonald {
+  background-color: lightblue;
+  background-image: none;
+  
+}
+
+body.galen-macdonald a{
+  color: purple;
+  font-size: 2em;
+}
