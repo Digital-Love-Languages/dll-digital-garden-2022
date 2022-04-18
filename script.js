@@ -226,18 +226,15 @@ $( document ).ready(function() {
         // is clicked
         $("input[type=checkbox]").click(function(e) {
           renderFilters(data);
-          // also add classname based on input value
+          // also add classname to body based on input name
           let id = $(this).attr("id");
           let bodyClassName = id.replace(/\s+/g, '-').toLowerCase();
           if ($(this).is(":checked")) {
-            console.log("removing class")
               $("body").addClass(bodyClassName);
           }
           else {
-            console.log("adding class")
               $("body").removeClass(bodyClassName);
           }
-          console.log("id: " + bodyClassName);
         });
 
       });
