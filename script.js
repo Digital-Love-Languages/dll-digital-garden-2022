@@ -17,8 +17,8 @@
 /// the url that the data (submitted assignments) is loaded from
 var DATA_FILE_URL = "http://form.digitallovelanguages.com/static/data.json";
 /// the url that the config (words, projects, names), is loaded from
-// var CONFIG_FILE_URL = "http://digitallovelanguages.com/assets/config.json"
-var CONFIG_FILE_URL = "http://localhost:8001/assets/config.json"
+var CONFIG_FILE_URL = "http://digitallovelanguages.com/assets/config.json"
+// var CONFIG_FILE_URL = "http://localhost:8001/assets/config.json"
 
 /// global variables where the config and data are stored
 var CONFIG;
