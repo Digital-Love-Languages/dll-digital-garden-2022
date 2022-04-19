@@ -8,45 +8,13 @@
 
 /* Custom style */
 body {
-    /* https://www.gradient-animator.com/ is fun */
-    /* https://cssgradient.io -- has some colors to try */
-    /* background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%); */
-
   background-image: url("https://cdn.glitch.global/435182a9-55ac-4fdb-b9f3-188c93838242/morgane-le-breton-rqIr5yFIaGc-unsplash.jpg?v=1649957153631");
   background-position: center;
   background-repeat: no-repeat;
-  background-size: stretch;
+  background-size: 750%;
   padding: 32px;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+  background-position-x: right;
   overflow-x: hidden;
-    /* -webkit-animation: AnimationName 72s ease infinite;
-    -moz-animation: AnimationName 72s ease infinite;
-    animation: AnimationName 72s ease infinite; */
-
-}
-
-.background {
-
-
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:49% 0%}
-    50%{background-position:52% 100%}
-    100%{background-position:49% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:49% 0%}
-    50%{background-position:52% 100%}
-    100%{background-position:49% 0%}
-}
-@keyframes AnimationName {
-    0%{background-position:49% 0%}
-    50%{background-position:52% 100%}
-    100%{background-position:49% 0%}
 }
 
 .content {
@@ -67,7 +35,6 @@ body {
 label {
   padding-left: 5px;
 }
-
 
 
 .footer {
@@ -101,7 +68,10 @@ label {
 
 a {
   border: 1px dashed yellow;
-  margin: 10px;
+  padding: 1em;
+  line-height: 2.5;
+  background-color: #a5f9ff69;
+  border-radius: 25px;
 }
 
 body.max-fowler {
@@ -109,27 +79,62 @@ body.max-fowler {
     background-image: none;
 }
 
-body.melanie-hoff {
-    transform: rotate(-30deg);
-}
 
 body.michelle-santiago-cortes {
     background-color: green;
     background-image: none;
 }
 
+body.melanie-hoff {
+    transform: rotate(-15deg);
+}
+
 body.melanie-hoff a{
-    font-size: 4em;
-    color: violet;
+    font-size: 2em;
+    color: yellow;
+}
+
+body.melanie-hoff .garden {
+  padding-left: 332px;
+  padding-top: 59px;
+  float: none;
+  padding-bottom: 200px;
 }
 
 body.galen-macdonald {
   background-color: lightblue;
   background-image: none;
-  
+
 }
 
 body.galen-macdonald a{
   color: purple;
   font-size: 2em;
+}
+
+body.casualsalad {
+  background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+  -webkit-animation: AnimationName 15s ease infinite;
+  -moz-animation: AnimationName 15s ease infinite;
+  animation: AnimationName 15s ease infinite;
+}
+
+
+
+body.casualsalad @-webkit-keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+
+body.casualsalad @-moz-keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
+}
+
+body.casualsalad @keyframes AnimationName {
+    0%{background-position:49% 0%}
+    50%{background-position:52% 100%}
+    100%{background-position:49% 0%}
 }
