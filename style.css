@@ -6,7 +6,12 @@
   padding: 0;
 }
 
-/* Custom style */
+/*
+ ___  __    ___         __     ___       ___     __   __               __        __
+|__  |  \ |  |  | |\ | / _`     |  |__| |__     /  ` /  \  |\/|  |\/| /  \ |\ | /__`
+|___ |__/ |  |  | | \| \__>     |  |  | |___    \__, \__/  |  |  |  | \__/ | \| .__/
+
+ */
 body {
   background-image: url("https://cdn.glitch.global/435182a9-55ac-4fdb-b9f3-188c93838242/morgane-le-breton-rqIr5yFIaGc-unsplash.jpg?v=1649957153631");
   background-position: center;
@@ -73,6 +78,15 @@ a {
   background-color: #a5f9ff69;
   border-radius: 25px;
 }
+
+
+/*
+ ___  __    ___         __          __        __      __             __   __                      ___
+|__  |  \ |  |  | |\ | / _`    \ / /  \ |  | |__)    /  ` |     /\  /__` /__`    |\ |  /\   |\/| |__
+|___ |__/ |  |  | | \| \__>     |  \__/ \__/ |  \    \__, |___ /~~\ .__/ .__/    | \| /~~\  |  | |___
+
+ */
+
 
 body.max-fowler {
     background-color: blue;
