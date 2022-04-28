@@ -88,16 +88,16 @@ $( document ).ready(function() {
     // renders the correct data appropriately
     function renderFilters(data) {
 
-      var selectedDays = $('.day-checkbox:checkbox:checked').map(function() {
+      var selectedDays = $('.day-checkbox:checkbox:checked').map(function () {
         return $(this).val();
       }).get();
-      var selectedNames = $('.name-checkbox:checkbox:checked').map(function() {
+      var selectedNames = $('.name-checkbox:checkbox:checked').map(function () {
         return $(this).val();
       }).get();
-      var selectedProjects = $('.project-checkbox:checkbox:checked').map(function() {
+      var selectedProjects = $('.project-checkbox:checkbox:checked').map(function () {
         return $(this).val();
       }).get();
-      var selectedTopics = $('.topic-checkbox:checkbox:checked').map(function() {
+      var selectedTopics = $('.topic-checkbox:checkbox:checked').map(function () {
         return $(this).val();
       }).get();
 
@@ -106,25 +106,25 @@ $( document ).ready(function() {
 
       // filter by days
       if (selectedDays.length > 0) {
-        filteredData =  filteredData.filter(function(value) {
+        filteredData = filteredData.filter(function (value) {
           return selectedDays.includes(value.day)
         });
       }
       // filter by names
       if (selectedNames.length > 0) {
-        filteredData =  filteredData.filter(function(value) {
+        filteredData = filteredData.filter(function (value) {
           return selectedNames.includes(value.name)
         });
       }
       // filter by project
       if (selectedProjects.length > 0) {
-        filteredData =  filteredData.filter(function(value) {
+        filteredData = filteredData.filter(function (value) {
           return selectedProjects.includes(value.project)
         });
       }
       // filter by topic
       if (selectedTopics.length > 0) {
-        filteredData =  filteredData.filter(function(value) {
+        filteredData = filteredData.filter(function (value) {
           return selectedTopics.includes(value.topic)
         });
       }
@@ -144,10 +144,9 @@ $( document ).ready(function() {
       for (var value of filteredData) {
         console.log(value);
         let title;
-        if ('title' in value && value.title !== '' ) {
+        if ('title' in value && value.title !== '') {
           title = value.title;
-        }
-        else {
+        } else {
           title = "Untitled"
         }
         $('.garden')
@@ -155,6 +154,7 @@ $( document ).ready(function() {
           .append(`<br>`);
       }
     }
+
     // build all the filters based on values in config
     $.getJSON(CONFIG_FILE_URL, function (config) {
       CONFIG = config;
@@ -214,17 +214,17 @@ $( document ).ready(function() {
         // set the day of the student, based on their name
         var days = Object.keys(CONFIG["DAYS"]);
         for (var value of data) {
-            for (var day of days) {
-              var students_in_day = CONFIG["DAYS"][day];
-              if (students_in_day.includes(value.name)) {
-                value.day = day;
-              }
+          for (var day of days) {
+            var students_in_day = CONFIG["DAYS"][day];
+            if (students_in_day.includes(value.name)) {
+              value.day = day;
             }
+          }
         }
 
         // and add a click handler, to re-filter, whenever a checkbox
         // is clicked
-        $("input[type=checkbox]").click(function(e) {
+        $("input[type=checkbox]").click(function (e) {
           renderFilters(data);
           // also add classname to body based on input name
           let id = $(this).attr("id");
@@ -235,45 +235,41 @@ $( document ).ready(function() {
 
           // checked
           if ($(this).is(":checked")) {
-              $("body").addClass(bodyClassName);
-          }
-          else {
-              $("body").removeClass(bodyClassName);
+            $("body").addClass(bodyClassName);
+          } else {
+            $("body").removeClass(bodyClassName);
           }
         });
 
       });
 
-    // if loading the data failed
+      // if loading the data failed
     }).fail(function () {
       console.log("fetching json failed");
     });
   }
-});
 
-  function shufflePhrase( )
-{
-  let phrases = [
-    "Stomach ache was last week :/", 
-    "so sweet <3 ",
-    "Her work is fascinating! wow",
-    "I have such fond memories of making envelopes at summer camp I worked at for many years",
-    "possibility of good suprises",
-    "possibility of unlikely suprises",
-    "ur all invited to have feelings",
-    "good things come to those who wait"
-  ];
-  const phrase = phrases[Math.floor(Math.random() * phrases.length)];
-  console.log(phrase);
-  // let phrase = "test phrase 2";
-  $(".phrase").html(phrase);
-}
-  
+  function shufflePhrase() {
+    let phrases = [
+      "Stomach ache was last week :/",
+      "so sweet <3 ",
+      "Her work is fascinating! wow",
+      "I have such fond memories of making envelopes at summer camp I worked at for many years",
+      "possibility of good suprises",
+      "possibility of unlikely suprises",
+      "ur all invited to have feelings",
+      "good things come to those who wait"
+    ];
+    const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+    console.log(phrase);
+    // let phrase = "test phrase 2";
+    $(".phrase").html(phrase);
+  }
+
   // setInterval(shufflePhrase, 5000);
-  
-  $(document).click(function(e) {
-     shufflePhrase();
-  });
 
+  $(document).click(function (e) {
+    shufflePhrase();
+  });
 
 });
