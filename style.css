@@ -13,13 +13,14 @@
 
  */
 body {
-  background-image: url("https://cdn.glitch.global/435182a9-55ac-4fdb-b9f3-188c93838242/morgane-le-breton-rqIr5yFIaGc-unsplash.jpg?v=1649957153631");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 750%;
-  padding: 32px;
-  background-position-x: right;
-  overflow-x: hidden;
+  background-image: url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/blossom.jpeg?v=1651184117033"),
+    url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/garden1.jpeg?v=1651183899752"),
+    url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/biosphere.jpeg?v=1651184026891"),
+    url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/desert.jpeg?v=1651184038701");
+  background-position: right bottom, left top, right top, left bottom;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 50%, 70%, 70%, 80%;
+  color: pink;
 }
 
 .content {
