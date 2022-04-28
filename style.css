@@ -34,7 +34,7 @@ body:hover {
   padding: 15px;
   float: left;
   font-family:monospace;
-  background-color:white;
+  /*background-color:white;*/
   color: black;
    opacity: 1;
   transition: opacity 1s;
@@ -91,8 +91,8 @@ img{
 .words{
   font-size: 20px;
   font-family: Florence, cursive;
-  
-  
+
+
 }
 
 .projects{
@@ -173,11 +173,11 @@ a:hover {
 }
 
 marquee {
-  font-size:2em; 
-  width: 300px; 
+  font-size:2em;
+  width: 300px;
   filter: drop-shadow(30px 10px 4px #4444dd);
-  font-family: fantasy; 
-  color: ivory; 
+  font-family: fantasy;
+  color: ivory;
 }
 
 
