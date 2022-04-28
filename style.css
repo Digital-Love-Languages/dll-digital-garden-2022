@@ -49,7 +49,10 @@ img{
 
 
 .garden {
-  float: left;
+  float: right;
+  position: fixed;
+  top: 10%;
+  left: 40%;
   padding-left: 70px;
   padding-top: 15px;
 }
