@@ -273,7 +273,7 @@ $( document ).ready(function() {
   
   $(document).click(function(e) {
      shufflePhrase();
-  });
+  };
 
 
 });
