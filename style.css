@@ -23,8 +23,21 @@ body {
 }
 
 .content {
+  display: flex;
   padding: 15px;
   float: left;
+  font-family:monospace;
+  background-color:white;
+  color: black;
+   opacity: 1;
+  transition: opacity 1s;
+}
+
+.img-container{
+  position:absolute;
+  padding:10px;
+  bottom:20px;
+  width:500px;
 }
 
 .garden {
