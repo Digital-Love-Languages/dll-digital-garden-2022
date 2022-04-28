@@ -106,14 +106,32 @@ label {
 
 
 .footer {
-  padding-bottom: 5px;
+  padding-bottom: 0.51em;
   font-family: cirrus;
-  font-size: 15px;
+  font-size: 103px;
   position: fixed;
+  opacity: 0.56;
   left: 0;
   bottom: 0;
-  width: 100%;
-  text-align: center;
+  width: 98%;
+  text-align: right;
+  display: flex;
+  z-index: -1;
+}
+
+.title {
+  color: yellow;
+  text-shadow: -4px -7px 0  #ff5a00, 2px -8px 0  #ff5a00, -2px 1px 0  #ff5a00, 3px 5px 0  #ff5a00;
+  transition: margin 0.5s ease-in-out;
+}
+
+.title:hover {
+  color: blue;
+  width: 59%;
+  float: right;
+  position: relative;
+  text-shadow: -2px -1px 0  #00ff5c, 3px -1px 0  #00ff5c, -7px 4px 0  #00ff5c, 4px 6px 0  #00ff5c;
+  transform: rotate(+17deg);
 }
 
 #topics-radio {
