@@ -268,8 +268,8 @@ $( document ).ready(function() {
 
   // setInterval(shufflePhrase, 5000);
 
-  $(document).click(function (e) {
-    shufflePhrase();
+  $(document).click(function(e) {
+     shufflePhrase();
   });
 
 });
