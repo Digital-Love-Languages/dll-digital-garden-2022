@@ -250,3 +250,30 @@ $( document ).ready(function() {
     });
   }
 });
+
+  function shufflePhrase( )
+{
+  let phrases = [
+    "Stomach ache was last week :/", 
+    "so sweet <3 ",
+    "Her work is fascinating! wow",
+    "I have such fond memories of making envelopes at summer camp I worked at for many years",
+    "possibility of good suprises",
+    "possibility of unlikely suprises",
+    "ur all invited to have feelings",
+    "good things come to those who wait"
+  ];
+  const phrase = phrases[Math.floor(Math.random() * phrases.length)];
+  console.log(phrase);
+  // let phrase = "test phrase 2";
+  $(".phrase").html(phrase);
+}
+  
+  // setInterval(shufflePhrase, 5000);
+  
+  $(document).click(function(e) {
+     shufflePhrase();
+  });
+
+
+});
