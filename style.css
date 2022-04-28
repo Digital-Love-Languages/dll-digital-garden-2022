@@ -31,6 +31,7 @@ body {
   color: black;
    opacity: 1;
   transition: opacity 1s;
+  font-family: 'Courier New', monospace;
 }
 
 .img-container{
