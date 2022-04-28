@@ -40,6 +40,14 @@ body {
   width:500px;
 }
 
+img{
+  width:100px;
+  left:10px;
+  bottom:10px;
+  position:float-left;
+}
+
+
 .garden {
   float: left;
   padding-left: 70px;
