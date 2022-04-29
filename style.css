@@ -24,7 +24,30 @@ body {
 
 .content {
   padding: 15px;
-  float: left;
+  float: right;
+  border: dotted #873769;
+  background: rgba(240,240,240, 0.4);
+  font-family: Monaco;
+  color: #873769;
+  transform:rotate(-10deg);
+}
+
+.days {
+  color:#5373a6 ;
+      text-align:right;
+
+}
+.words {
+  color: #ede84e;
+}
+
+.projects {
+  color: #3c29e6;
+    text-align:right;
+}
+
+.names {
+  color: #e010be;
 }
 
 .garden {
