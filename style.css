@@ -13,7 +13,7 @@
 
  */
 body {
-  background-image: url("https://cdn.glitch.global/435182a9-55ac-4fdb-b9f3-188c93838242/morgane-le-breton-rqIr5yFIaGc-unsplash.jpg?v=1649957153631");
+  background-image: linear-gradient(180deg, #7f248f, #5f49b8, #00208a);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 750%;
