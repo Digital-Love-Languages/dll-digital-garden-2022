@@ -33,21 +33,21 @@ body {
 }
 
 .days {
-  color:#5373a6 ;
+/*   color:#5373a6 ; */
       text-align:right;
 
 }
 .words {
-  color: #ede84e;
+/*   color: #ede84e; */
 }
 
 .projects {
-  color: #3c29e6;
+/*   color: #3c29e6; */
     text-align:right;
 }
 
 .names {
-  color: #e010be;
+/*   color: #e010be; */
 }
 
 .garden {
