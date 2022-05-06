@@ -13,7 +13,7 @@
 
  */
 body {
-  background-image: url("https://cdn.glitch.global/435182a9-55ac-4fdb-b9f3-188c93838242/morgane-le-breton-rqIr5yFIaGc-unsplash.jpg?v=1649957153631");
+  background-image: linear-gradient(180deg, #7f248f, #5f49b8, #00208a);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 750%;
@@ -24,7 +24,30 @@ body {
 
 .content {
   padding: 15px;
-  float: left;
+  float: right;
+  border: dotted #873769;
+  background: rgba(240,240,240, 0.4);
+  font-family: Monaco;
+  color: #873769;
+  transform:rotate(-10deg);
+}
+
+.days {
+/*   color:#5373a6 ; */
+      text-align:right;
+
+}
+.words {
+/*   color: #ede84e; */
+}
+
+.projects {
+/*   color: #3c29e6; */
+    text-align:right;
+}
+
+.names {
+/*   color: #e010be; */
 }
 
 .garden {
@@ -35,44 +58,66 @@ body {
 
 .filter-category {
   margin-bottom: 20px;
-  border:10px dotted limegreen;
-  letter-spacing: 10px;
-  padding:20px;
-  text-shadow: honeydew 30px 2px 2px, 0 0 1em cornflowerblue, 0 0 0.2em blue;
 }
 
-.days{
-  font-size: 70px;
-  color: mediumvioletred;
-  transform: rotate(35deg);
-  border: 12px dashed lavenderblush;
-  position: fixed;
-  top: 10%;
-  left: 30%;
-  width: 60%;
-  text-align: right;
-  font-family: cursive;
-
-
-}
-
-.words{
-  font-size: 20px;
-  font-family: Florence, cursive;
+.rainbow {
   
+   /* Font options */
+  font-size:16px;
   
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 5s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 5s infinite;
+  
+  /* Standar Syntax */
+  animation: rainbow 5s infinite; 
 }
 
-.projects{
-  width: 100%;
-  text-transform: uppercase;
-  color: blanchedalmond;
-  font-weight:bold;
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+  0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
 }
 
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+   0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
+}
 
-.filter-category {
-  margin-bottom: 20px;
+/* Standar Syntax */
+@keyframes rainbow{
+    0%{color: orange;}	
+  10%{color: purple;}	
+	20%{color: red;}
+  30%{color: CadetBlue;}
+	40%{color: yellow;}
+  50%{color: coral;}
+	60%{color: green;}
+  70%{color: cyan;}
+  80%{color: DeepPink;}
+  90%{color: DodgerBlue;}
+	100%{color: orange;}
 }
 
 label {
@@ -81,14 +126,57 @@ label {
 
 
 .footer {
-  padding-bottom: 5px;
-  font-family: cirrus;
+  border: 5px solid gold;
+  font-family: courier;
   font-size: 15px;
+  color: magenta;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
+  transform: rotate(38.5deg);
+}
+
+
+
+@keyframes animated_text {
+	0% { background-position: 0px 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0px 50%; }
+}
+
+
+.title2 {
+  transform: rotate(-50deg);
+  font-family: cursive;
+  display: none;
+  position: absolute;
+  
+  
+  /* safe space */
+  	background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
+	background-size: 300%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 5vw;
+	letter-spacing: -5px;
+	text-transform: uppercase;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animated_text 10s ease-in-out infinite;
+	-moz-animation: animated_text 10s ease-in-out infinite;
+	-webkit-animation: animated_text 10s ease-in-out infinite;
+
+}
+
+.footer:hover .title2 {
+  display: block;
+}
+
+.title {
+  border: 5px solid magenta;
+  filter: drop-shadow(5px 5px 5px #4444dd);
 }
 
 #topics-radio {
