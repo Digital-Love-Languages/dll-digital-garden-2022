@@ -58,7 +58,7 @@ def form_post():
     if request.method == 'POST':
         data = request.form
         print("data: {}".format(data))
-        filename = data['name'] + "-" + data['project']
+        filename = data['name'] + '-' + data['title']
         file_path = os.path.join(DATA_DIR, filename)
         link = data['link-input']
         if link:
