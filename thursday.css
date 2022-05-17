@@ -1,9 +1,9 @@
 
 /* Basic page style resets */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /*
@@ -13,190 +13,171 @@
 
  */
 body {
-  background-color: green;
+    background-image: url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/blossom.jpeg?v=1651184117033"),
+    url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/garden1.jpeg?v=1651183899752"),
+    url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/biosphere.jpeg?v=1651184026891"),
+    url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/desert.jpeg?v=1651184038701");
+    background-position: right bottom, left top, right top, left bottom;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 50%, 70%, 70%, 80%;
+    color: pink;
+    transition: all 3s;
+}
+
+body:hover {
+    transition: all 3s;
+    background-size: 60%, 40%, 50%, 100%
 }
 
 .content {
-  padding: 15px;
-  float: right;
-  border: dotted #873769;
-  background: rgba(240,240,240, 0.4);
-  font-family: Monaco;
-  color: #873769;
-  transform:rotate(-10deg);
+    display: flex;
+    padding: 15px;
+    float: left;
+    font-family:monospace;
+    /*background-color:white;*/
+    color: black;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Courier New', monospace;
 }
 
-.days {
-/*   color:#5373a6 ; */
-      text-align:right;
-
-}
-.words {
-/*   color: #ede84e; */
+.img-container{
+    position:absolute;
+    padding:10px;
+    bottom:20px;
+    width:500px;
 }
 
-.projects {
-/*   color: #3c29e6; */
-    text-align:right;
+img{
+    width:100px;
+    left:10px;
+    bottom:10px;
+    position:float-left;
 }
 
-.names {
-/*   color: #e010be; */
-}
 
 .garden {
-  float: left;
-  padding-left: 70px;
-  padding-top: 15px;
+    float: right;
+    position: fixed;
+    top: 10%;
+    left: 40%;
+    padding-left: 70px;
+    padding-top: 15px;
 }
 
 .filter-category {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
+    border:10px dotted limegreen;
+    letter-spacing: 10px;
+    padding:20px;
+    text-shadow: honeydew 30px 2px 2px, 0 0 1em cornflowerblue, 0 0 0.2em blue;
 }
 
-.rainbow {
+.days{
+    font-size: 70px;
+    color: mediumvioletred;
+    transform: rotate(35deg);
+    border: 12px dashed lavenderblush;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    width: 60%;
+    text-align: right;
+    font-family: cursive;
 
-   /* Font options */
-  font-size:16px;
 
-   /* Chrome, Safari, Opera */
-  -webkit-animation: rainbow 5s infinite;
-
-  /* Internet Explorer */
-  -ms-animation: rainbow 5s infinite;
-
-  /* Standar Syntax */
-  animation: rainbow 5s infinite;
 }
 
-/* Chrome, Safari, Opera */
-@-webkit-keyframes rainbow{
-  0%{color: orange;}
-  10%{color: purple;}
-	20%{color: red;}
-  30%{color: CadetBlue;}
-	40%{color: yellow;}
-  50%{color: coral;}
-	60%{color: green;}
-  70%{color: cyan;}
-  80%{color: DeepPink;}
-  90%{color: DodgerBlue;}
-	100%{color: orange;}
+.words{
+    font-size: 20px;
+    font-family: Florence, cursive;
+
+
 }
 
-/* Internet Explorer */
-@-ms-keyframes rainbow{
-   0%{color: orange;}
-  10%{color: purple;}
-	20%{color: red;}
-  30%{color: CadetBlue;}
-	40%{color: yellow;}
-  50%{color: coral;}
-	60%{color: green;}
-  70%{color: cyan;}
-  80%{color: DeepPink;}
-  90%{color: DodgerBlue;}
-	100%{color: orange;}
+.projects{
+    width: 100%;
+    text-transform: uppercase;
+    color: blanchedalmond;
+    font-weight:bold;
 }
 
-/* Standar Syntax */
-@keyframes rainbow{
-    0%{color: orange;}
-  10%{color: purple;}
-	20%{color: red;}
-  30%{color: CadetBlue;}
-	40%{color: yellow;}
-  50%{color: coral;}
-	60%{color: green;}
-  70%{color: cyan;}
-  80%{color: DeepPink;}
-  90%{color: DodgerBlue;}
-	100%{color: orange;}
+
+.filter-category {
+    margin-bottom: 20px;
 }
 
 label {
-  padding-left: 5px;
+    padding-left: 5px;
 }
 
 
 .footer {
-  border: 5px solid gold;
-  font-family: courier;
-  font-size: 15px;
-  color: magenta;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  transform: rotate(38.5deg);
-}
-
-
-
-@keyframes animated_text {
-	0% { background-position: 0px 50%; }
-	50% { background-position: 100% 50%; }
-	100% { background-position: 0px 50%; }
-}
-
-
-.title2 {
-  transform: rotate(-50deg);
-  font-family: cursive;
-  display: none;
-  position: absolute;
-
-
-  /* safe space */
-  	background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
-	background-size: 300%;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 900;
-	font-size: 5vw;
-	letter-spacing: -5px;
-	text-transform: uppercase;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: animated_text 10s ease-in-out infinite;
-	-moz-animation: animated_text 10s ease-in-out infinite;
-	-webkit-animation: animated_text 10s ease-in-out infinite;
-
-}
-
-.footer:hover .title2 {
-  display: block;
+    padding-bottom: 0.51em;
+    font-family: cirrus;
+    font-size: 103px;
+    position: fixed;
+    opacity: 0.56;
+    left: 0;
+    bottom: 0;
+    width: 98%;
+    text-align: right;
+    display: flex;
+    z-index: -1;
 }
 
 .title {
-  border: 5px solid magenta;
-  filter: drop-shadow(5px 5px 5px #4444dd);
+    color: yellow;
+    text-shadow: -4px -7px 0  #ff5a00, 2px -8px 0  #ff5a00, -2px 1px 0  #ff5a00, 3px 5px 0  #ff5a00;
+    transition: margin 0.5s ease-in-out;
+}
+
+.title:hover {
+    color: blue;
+    width: 59%;
+    float: right;
+    position: relative;
+    text-shadow: -2px -1px 0  #00ff5c, 3px -1px 0  #00ff5c, -7px 4px 0  #00ff5c, 4px 6px 0  #00ff5c;
+    transform: rotate(+17deg);
 }
 
 #topics-radio {
-  padding-left: 20px;
+    padding-left: 20px;
 }
 
 #submit-button {
-  padding: 20px;
+    padding: 20px;
 }
 
 .form-text-input {
-  width: 500px;
-  padding: 5px;
+    width: 500px;
+    padding: 5px;
 }
 
 .data-link {
-  color: blue;
-  text-decoration: underline;
+    color: blue;
+    text-decoration: underline;
 }
 
 a {
-  border: 1px dashed yellow;
-  padding: 1em;
-  line-height: 2.5;
-  background-color: #a5f9ff69;
-  border-radius: 25px;
+    border: 1px dashed yellow;
+    padding: 1em;
+    line-height: 2.5;
+    background-color: #a5f9ff69;
+    border-radius: 25px;
+}
+
+
+a:hover {
+    color:violet;
+}
+
+marquee {
+    font-size:2em;
+    width: 300px;
+    filter: drop-shadow(30px 10px 4px #4444dd);
+    font-family: fantasy;
+    color: ivory;
 }
 
 
@@ -230,46 +211,46 @@ body.melanie-hoff a{
 }
 
 body.melanie-hoff .garden {
-  padding-left: 332px;
-  padding-top: 59px;
-  float: none;
-  padding-bottom: 200px;
+    padding-left: 332px;
+    padding-top: 59px;
+    float: none;
+    padding-bottom: 200px;
 }
 
 body.galen-macdonald {
-  background-color: lightblue;
-  background-image: none;
+    background-color: lightblue;
+    background-image: none;
 
 }
 
 body.galen-macdonald a{
-  color: purple;
-  font-size: 2em;
+    color: purple;
+    font-size: 2em;
 }
 
 body.casualsalad {
-  background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
-  -webkit-animation: AnimationName 15s ease infinite;
-  -moz-animation: AnimationName 15s ease infinite;
-  animation: AnimationName 15s ease infinite;
+    background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    -webkit-animation: AnimationName 15s ease infinite;
+    -moz-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
 }
 
 
 
 body.casualsalad @-webkit-keyframes AnimationName {
-    0%{background-position:49% 0%}
-    50%{background-position:52% 100%}
-    100%{background-position:49% 0%}
-}
+                     0%{background-position:49% 0%}
+                     50%{background-position:52% 100%}
+                     100%{background-position:49% 0%}
+                 }
 
 body.casualsalad @-moz-keyframes AnimationName {
-    0%{background-position:49% 0%}
-    50%{background-position:52% 100%}
-    100%{background-position:49% 0%}
-}
+                     0%{background-position:49% 0%}
+                     50%{background-position:52% 100%}
+                     100%{background-position:49% 0%}
+                 }
 
 body.casualsalad @keyframes AnimationName {
-    0%{background-position:49% 0%}
-    50%{background-position:52% 100%}
-    100%{background-position:49% 0%}
-}
+                     0%{background-position:49% 0%}
+                     50%{background-position:52% 100%}
+                     100%{background-position:49% 0%}
+                 }

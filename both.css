@@ -1,3 +1,4 @@
+
 /* Basic page style resets */
 * {
     box-sizing: border-box;
@@ -7,13 +8,7 @@
 
 /* Custom style */
 body {
-    /* https://www.gradient-animator.com/ is fun */
-    /* https://cssgradient.io -- has some colors to try */
-    background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
-    background-size: 400% 400%;
-    -webkit-animation: AnimationName 72s ease infinite;
-    -moz-animation: AnimationName 72s ease infinite;
-    animation: AnimationName 72s ease infinite;
+    background-color: white;
 }
 
 @-webkit-keyframes AnimationName {

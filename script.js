@@ -219,14 +219,12 @@ $( document ).ready(function() {
           changeCss("style.css");
         }
         else if (selectedDays.length == 2) {
-          $('.style-link').remove();
-          $('head').append('<link href="thursday.css" rel="stylesheet"  class="style-link" />');
-          $('head').append('<link href="friday.css" rel="stylesheet"  class="style-link" />');
+          changeCss("both.css");
         }
         else {
-          if (day === "Thursday") {
+          if (((day === "Thursday") && ($(this).is(":checked"))) || ((day === "Friday") && !$(this).is(":checked"))) {
             changeCss("thursday.css");
-          } else if (day === "Friday") {
+          } else {
             changeCss("friday.css");
           }
         }
