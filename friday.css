@@ -13,7 +13,12 @@
 
  */
 body {
-  background-color: blue;
+  background-image: linear-gradient(180deg, #7f248f, #5f49b8, #00208a);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 750%;
+  padding: 32px;
+  background-position-x: right;
   overflow-x: hidden;
 }
 
@@ -56,24 +61,24 @@ body {
 }
 
 .rainbow {
-
+  
    /* Font options */
   font-size:16px;
-
+  
    /* Chrome, Safari, Opera */
-  -webkit-animation: rainbow 5s infinite;
-
+  -webkit-animation: rainbow 5s infinite; 
+  
   /* Internet Explorer */
   -ms-animation: rainbow 5s infinite;
-
+  
   /* Standar Syntax */
-  animation: rainbow 5s infinite;
+  animation: rainbow 5s infinite; 
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes rainbow{
-  0%{color: orange;}
-  10%{color: purple;}
+  0%{color: orange;}	
+  10%{color: purple;}	
 	20%{color: red;}
   30%{color: CadetBlue;}
 	40%{color: yellow;}
@@ -87,8 +92,8 @@ body {
 
 /* Internet Explorer */
 @-ms-keyframes rainbow{
-   0%{color: orange;}
-  10%{color: purple;}
+   0%{color: orange;}	
+  10%{color: purple;}	
 	20%{color: red;}
   30%{color: CadetBlue;}
 	40%{color: yellow;}
@@ -102,8 +107,8 @@ body {
 
 /* Standar Syntax */
 @keyframes rainbow{
-    0%{color: orange;}
-  10%{color: purple;}
+    0%{color: orange;}	
+  10%{color: purple;}	
 	20%{color: red;}
   30%{color: CadetBlue;}
 	40%{color: yellow;}
@@ -147,8 +152,8 @@ label {
   font-family: cursive;
   display: none;
   position: absolute;
-
-
+  
+  
   /* safe space */
   	background: linear-gradient(-45deg, #6355a4, #6355a4, #e89a3e, #e89a3e);
 	background-size: 300%;
