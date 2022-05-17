@@ -18,7 +18,7 @@
 var DATA_FILE_URL = "http://form.digitallovelanguages.com/static/data.json";
 /// the url that the config (words, projects, names), is loaded from
 var CONFIG_FILE_URL = "http://digitallovelanguages.com/assets/config.json"
-// var CONFIG_FILE_URL = "http://localhost:8001/assets/config.json"
+// var CONFIG_FILE_URL = "http://localhost:8000/assets/config.json"
 
 /// global variables where the config and data are stored
 var CONFIG;
@@ -35,7 +35,6 @@ $( document ).ready(function() {
     console.log("...redirecting to http");
     location.replace(`http:${location.href.substring(location.protocol.length)}`);
   }
-
 
   // initialize everything for the /form page
   if (pathname === "/form.html" || pathname === '/form') {
@@ -205,6 +204,31 @@ $( document ).ready(function() {
           .append(`<label for="${value}">${value}</label></div>`)
           .append(`<br>`);
       }
+
+      // thursday / friday checkbox button functions
+      function changeCss(cssLink) {
+        $('.style-link').remove();
+        $('head').append('<link href="' + cssLink + '" rel="stylesheet"  class="style-link" />');
+      }
+
+      $('.day-checkbox').click(function(e) {
+        let day = $(this).val();
+        var selectedDays = $('.day-checkbox:checkbox:checked');
+        console.log(selectedDays);
+        if (selectedDays.length === 0) {
+          changeCss("style.css");
+        }
+        else if (selectedDays.length == 2) {
+          changeCss("both.css");
+        }
+        else {
+          if (((day === "Thursday") && ($(this).is(":checked"))) || ((day === "Friday") && !$(this).is(":checked"))) {
+            changeCss("thursday.css");
+          } else {
+            changeCss("friday.css");
+          }
+        }
+      })
 
       // load all the assignments and then do an initial rendering
       $.getJSON(DATA_FILE_URL, function (data) {

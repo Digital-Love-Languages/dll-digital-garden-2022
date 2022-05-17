@@ -1,0 +1,256 @@
+
+/* Basic page style resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ ___  __    ___         __     ___       ___     __   __               __        __
+|__  |  \ |  |  | |\ | / _`     |  |__| |__     /  ` /  \  |\/|  |\/| /  \ |\ | /__`
+|___ |__/ |  |  | | \| \__>     |  |  | |___    \__, \__/  |  |  |  | \__/ | \| .__/
+
+ */
+body {
+    background-image: url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/blossom.jpeg?v=1651184117033"),
+    url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/garden1.jpeg?v=1651183899752"),
+    url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/biosphere.jpeg?v=1651184026891"),
+    url("https://cdn.glitch.global/c9aac727-0d65-4d34-90fb-28b57b8b0147/desert.jpeg?v=1651184038701");
+    background-position: right bottom, left top, right top, left bottom;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: 50%, 70%, 70%, 80%;
+    color: pink;
+    transition: all 3s;
+}
+
+body:hover {
+    transition: all 3s;
+    background-size: 60%, 40%, 50%, 100%
+}
+
+.content {
+    display: flex;
+    padding: 15px;
+    float: left;
+    font-family:monospace;
+    /*background-color:white;*/
+    color: black;
+    opacity: 1;
+    transition: opacity 1s;
+    font-family: 'Courier New', monospace;
+}
+
+.img-container{
+    position:absolute;
+    padding:10px;
+    bottom:20px;
+    width:500px;
+}
+
+img{
+    width:100px;
+    left:10px;
+    bottom:10px;
+    position:float-left;
+}
+
+
+.garden {
+    float: right;
+    position: fixed;
+    top: 10%;
+    left: 40%;
+    padding-left: 70px;
+    padding-top: 15px;
+}
+
+.filter-category {
+    margin-bottom: 20px;
+    border:10px dotted limegreen;
+    letter-spacing: 10px;
+    padding:20px;
+    text-shadow: honeydew 30px 2px 2px, 0 0 1em cornflowerblue, 0 0 0.2em blue;
+}
+
+.days{
+    font-size: 70px;
+    color: mediumvioletred;
+    transform: rotate(35deg);
+    border: 12px dashed lavenderblush;
+    position: fixed;
+    top: 10%;
+    left: 30%;
+    width: 60%;
+    text-align: right;
+    font-family: cursive;
+
+
+}
+
+.words{
+    font-size: 20px;
+    font-family: Florence, cursive;
+
+
+}
+
+.projects{
+    width: 100%;
+    text-transform: uppercase;
+    color: blanchedalmond;
+    font-weight:bold;
+}
+
+
+.filter-category {
+    margin-bottom: 20px;
+}
+
+label {
+    padding-left: 5px;
+}
+
+
+.footer {
+    padding-bottom: 0.51em;
+    font-family: cirrus;
+    font-size: 103px;
+    position: fixed;
+    opacity: 0.56;
+    left: 0;
+    bottom: 0;
+    width: 98%;
+    text-align: right;
+    display: flex;
+    z-index: -1;
+}
+
+.title {
+    color: yellow;
+    text-shadow: -4px -7px 0  #ff5a00, 2px -8px 0  #ff5a00, -2px 1px 0  #ff5a00, 3px 5px 0  #ff5a00;
+    transition: margin 0.5s ease-in-out;
+}
+
+.title:hover {
+    color: blue;
+    width: 59%;
+    float: right;
+    position: relative;
+    text-shadow: -2px -1px 0  #00ff5c, 3px -1px 0  #00ff5c, -7px 4px 0  #00ff5c, 4px 6px 0  #00ff5c;
+    transform: rotate(+17deg);
+}
+
+#topics-radio {
+    padding-left: 20px;
+}
+
+#submit-button {
+    padding: 20px;
+}
+
+.form-text-input {
+    width: 500px;
+    padding: 5px;
+}
+
+.data-link {
+    color: blue;
+    text-decoration: underline;
+}
+
+a {
+    border: 1px dashed yellow;
+    padding: 1em;
+    line-height: 2.5;
+    background-color: #a5f9ff69;
+    border-radius: 25px;
+}
+
+
+a:hover {
+    color:violet;
+}
+
+marquee {
+    font-size:2em;
+    width: 300px;
+    filter: drop-shadow(30px 10px 4px #4444dd);
+    font-family: fantasy;
+    color: ivory;
+}
+
+
+/*
+ ___  __    ___         __          __        __      __             __   __                      ___
+|__  |  \ |  |  | |\ | / _`    \ / /  \ |  | |__)    /  ` |     /\  /__` /__`    |\ |  /\   |\/| |__
+|___ |__/ |  |  | | \| \__>     |  \__/ \__/ |  \    \__, |___ /~~\ .__/ .__/    | \| /~~\  |  | |___
+
+ */
+
+
+body.max-fowler {
+    background-color: blue;
+    background-image: none;
+}
+
+
+body.michelle-santiago-cortes {
+    background-color: green;
+    background-image: none;
+}
+
+body.melanie-hoff {
+    transform: rotate(-15deg);
+    color: pink;
+}
+
+body.melanie-hoff a{
+    font-size: 2em;
+    color: yellow;
+}
+
+body.melanie-hoff .garden {
+    padding-left: 332px;
+    padding-top: 59px;
+    float: none;
+    padding-bottom: 200px;
+}
+
+body.galen-macdonald {
+    background-color: lightblue;
+    background-image: none;
+
+}
+
+body.galen-macdonald a{
+    color: purple;
+    font-size: 2em;
+}
+
+body.casualsalad {
+    background: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    -webkit-animation: AnimationName 15s ease infinite;
+    -moz-animation: AnimationName 15s ease infinite;
+    animation: AnimationName 15s ease infinite;
+}
+
+
+
+body.casualsalad @-webkit-keyframes AnimationName {
+                     0%{background-position:49% 0%}
+                     50%{background-position:52% 100%}
+                     100%{background-position:49% 0%}
+                 }
+
+body.casualsalad @-moz-keyframes AnimationName {
+                     0%{background-position:49% 0%}
+                     50%{background-position:52% 100%}
+                     100%{background-position:49% 0%}
+                 }
+
+body.casualsalad @keyframes AnimationName {
+                     0%{background-position:49% 0%}
+                     50%{background-position:52% 100%}
+                     100%{background-position:49% 0%}
+                 }
